@@ -1,0 +1,24 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[931,555],{6128:function(e,t,r){Promise.resolve().then(r.bind(r,8621))},8621:function(e,t,r){"use strict";r.r(t),r.d(t,{default:function(){return d}});var a=r(7437),s=r(2265);/**
+ * @license lucide-react v0.446.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let n=e=>e.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),i=(...e)=>e.filter((e,t,r)=>!!e&&r.indexOf(e)===t).join(" ");/**
+ * @license lucide-react v0.446.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */var o={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};/**
+ * @license lucide-react v0.446.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let l=(0,s.forwardRef)(({color:e="currentColor",size:t=24,strokeWidth:r=2,absoluteStrokeWidth:a,className:n="",children:l,iconNode:c,...d},f)=>(0,s.createElement)("svg",{ref:f,...o,width:t,height:t,stroke:e,strokeWidth:a?24*Number(r)/Number(t):r,className:i("lucide",n),...d},[...c.map(([e,t])=>(0,s.createElement)(e,t)),...Array.isArray(l)?l:[l]])),c=((e,t)=>{let r=(0,s.forwardRef)(({className:r,...a},o)=>(0,s.createElement)(l,{ref:o,iconNode:t,className:i(`lucide-${n(e)}`,r),...a}));return r.displayName=`${e}`,r})("ArrowRight",[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"m12 5 7 7-7 7",key:"xquz4c"}]]);function d(){let[e,t]=(0,s.useState)(!1);return(0,s.useEffect)(()=>{t(!0)},[]),(0,a.jsxs)("div",{className:"relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden",children:[(0,a.jsxs)("div",{className:"relative z-10 text-center space-y-8",children:[(0,a.jsxs)("div",{children:[(0,a.jsx)("h1",{className:"text-white text-5xl sm:text-7xl md:text-8xl font-light tracking-wider mb-4 opacity-0 animate-fade-in text-shadow-subtle",children:"PRYSM LABS"}),(0,a.jsx)("p",{className:"text-gray-400 text-xl md:text-2xl font-light tracking-widest opacity-0 animate-fade-in-delayed text-shadow-subtle",children:"ILLUMINATING THE FUTURE"})]}),(0,a.jsx)("button",{className:"group relative px-5 py-[7px] mt-8 bg-[#0071e3] rounded-full  text-white text-[17px] leading-[1.17648] opacity-0 animate-fade-in-delayed-more hover:bg-[#0077ED] active:bg-[#006EDB] transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-[#0071e3]/20",children:(0,a.jsxs)("span",{className:"relative z-10 flex items-center gap-2",children:["Go to App",(0,a.jsx)(c,{className:"w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200"})]})})]}),(0,a.jsxs)("div",{className:"absolute bottom-32 w-full h-[4px] ".concat(e?"animate-beam":""),children:[(0,a.jsx)("div",{className:"absolute inset-0 bg-gradient-to-r from-transparent via-[#7f00ff] to-transparent opacity-70 blur-md"}),(0,a.jsx)("div",{className:"absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-90"})]}),(0,a.jsx)("div",{className:"absolute bottom-32 left-1/2 -translate-x-1/2 w-[200%]",children:(0,a.jsxs)("div",{className:"absolute inset-0 ".concat(e?"animate-prism":""),children:[(0,a.jsx)("div",{className:"h-[6px] absolute inset-0 bg-gradient-to-r from-transparent via-[#ff0080] to-transparent opacity-40 blur-md transform -translate-y-3"}),(0,a.jsx)("div",{className:"h-[6px] absolute inset-0 bg-gradient-to-r from-transparent via-[#0080ff] to-transparent opacity-40 blur-md transform -translate-y-1"}),(0,a.jsx)("div",{className:"h-[6px] absolute inset-0 bg-gradient-to-r from-transparent via-[#00ff80] to-transparent opacity-40 blur-md"})]})})]})}},622:function(e,t,r){"use strict";/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var a=r(2265),s=Symbol.for("react.element"),n=(Symbol.for("react.fragment"),Object.prototype.hasOwnProperty),i=a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,o={key:!0,ref:!0,__self:!0,__source:!0};function l(e,t,r){var a,l={},c=null,d=null;for(a in void 0!==r&&(c=""+r),void 0!==t.key&&(c=""+t.key),void 0!==t.ref&&(d=t.ref),t)n.call(t,a)&&!o.hasOwnProperty(a)&&(l[a]=t[a]);if(e&&e.defaultProps)for(a in t=e.defaultProps)void 0===l[a]&&(l[a]=t[a]);return{$$typeof:s,type:e,key:c,ref:d,props:l,_owner:i.current}}t.jsx=l,t.jsxs=l},7437:function(e,t,r){"use strict";e.exports=r(622)}},function(e){e.O(0,[971,864,744],function(){return e(e.s=6128)}),_N_E=e.O()}]);

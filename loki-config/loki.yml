@@ -1,0 +1,52 @@
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+
+schema_config:
+  configs:
+    - from: 2025-01-01
+      store: tsdb
+      object_store: filesystem
+      schema: v13
+      index:
+        prefix: index_
+        period: 24h
+
+storage_config:
+  tsdb_shipper:
+    active_index_directory: /loki/tsdb-index
+    cache_location: /loki/tsdb-cache
+
+ingester:
+  wal:
+    dir: "/tmp/wal"
+  lifecycler:
+    address: 127.0.0.1
+    ring:
+      kvstore:
+        store: inmemory
+      replication_factor: 1
+  chunk_idle_period: 5m
+  chunk_retain_period: 30s
+  chunk_target_size: 1536000
+  chunk_block_size: 262144
+
+limits_config:
+  retention_period: 168h  # 7 days
+  allow_structured_metadata: true  # Enables metadata for advanced queries -> useful to filter out logs
+
+compactor:
+  working_directory: /loki/compactor  # Required for Loki v13
+  compaction_interval: 10m  # Runs compaction every 10 minutes
+
+ruler:
+  storage:
+    type: local
+    local:
+      directory: /loki/rules
+  rule_path: /loki/rules
+  ring:
+    kvstore:
+      store: inmemory
+  enable_api: true
