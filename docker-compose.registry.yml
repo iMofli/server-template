@@ -9,7 +9,9 @@ services:
       - ./registry-data:/var/lib/registry  
     networks:
       - monitoring_network 
+      - registry_network
 
 networks:
   monitoring_network:
     external: true  # Use the pre-created network
+  registry_network:

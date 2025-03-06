@@ -1,0 +1,15 @@
+services: 
+  commly:
+      image: registry.prysm-labs.com/commlyfe:latest
+      container_name: commly
+      restart: unless-stopped
+      environment:
+        - NODE_ENV=production
+      networks:
+        - monitoring_network
+
+networks:
+  monitoring_network:
+    external: true  # Use the pre-created network
+  registry_network:
+    external: true

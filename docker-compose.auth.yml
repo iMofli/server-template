@@ -1,0 +1,56 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: the-auth-app
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432"
+    networks:
+      - auth_network
+      - monitoring_network
+
+  auth-server:
+    container_name: auth-server
+    image: registry.prysm-labs.com/auth-server:latest
+    restart: unless-stopped
+    platform: linux/amd64
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "postgresql://myuser:mypassword@postgres:5432/the-auth-app"
+      PORT: 4000
+      NODE_ENV: production
+    ports:
+      - "4000"
+    networks:
+      - auth_network
+      - monitoring_network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@example.com"  # pgAdmin login email
+      PGADMIN_DEFAULT_PASSWORD: "supersecret"     # pgAdmin login password
+    ports:
+      - "8081:80" # Expose pgAdmin on host port 8081
+    networks:
+      - auth_network
+
+volumes:
+  postgres-data:
+
+networks:
+  auth_network:
+    name: auth_network
+  registry_network:
+    external: true
+  monitoring_network:
+    external: true

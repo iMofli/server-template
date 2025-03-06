@@ -8,21 +8,13 @@ services:
     ports:
       - 80:80
       - 443:443
-    volumes:                                    # Storage can be either a
-      - certs:/etc/letsencrypt          # Docker managed volume (see list at the bottom)
+    volumes:                                            # Storage can be either a:
+      - certs:/etc/letsencrypt                             # Docker managed volume (see list at the bottom)
       - ./nginx-conf/user_conf.d:/etc/nginx/user_conf.d    # or a host mount with a relative or full path.
       - ./nginx-static:/usr/share/nginx/html
     networks:
       - monitoring_network
-  
-  commly:
-    image: jordiperez10/commlyfe:latest
-    container_name: commly
-    restart: unless-stopped
-    environment:
-      - NODE_ENV=production
-    networks:
-      - monitoring_network
+      - auth_network
 
 
 volumes:
@@ -31,3 +23,6 @@ volumes:
 networks:
   monitoring_network:
     external: true  # Use the pre-created network
+  auth_network:
+    name: auth_network
+  
